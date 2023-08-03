@@ -28,7 +28,7 @@ export default [
     input: "src/index.ts",
     output: {
       name: "libraryRollup",
-      file: pkg.browser,
+      file: pkg.unpkg,
       format: "umd",
       sourcemap: true,
     },

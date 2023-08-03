@@ -2,26 +2,35 @@
   "type": "module",
   "name": "library-rollup",
   "version": "0.1.0",
-  "description": "Really awesome thing this does",
+  "description": "TypeScript library npm package boilerplate",
   "author": "Devin <89256006@qq.com>",
   "homepage": "https://github.com/adntin/library-demo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adntin/library-demo"
+  },
+  "license": "MIT",
   "keywords": [
-    "Typescript NPM Package",
-    "TypeScript Library Boilerplate"
+    "typescript",
+    "npm",
+    "package",
+    "boilerplate"
   ],
   "main": "dist/library-rollup.cjs.js",
   "module": "dist/library-rollup.esm.js",
-  "browser": "dist/library-rollup.umd.js",
+  "unpkg": "dist/library-rollup.umd.js",
   "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "rollup -c -w",
+    "prebuild": "rimraf ./dist",
     "build": "rollup -c",
-    "docs": "typedoc src --out docs"
+    "predocs": "rimraf ./docs",
+    "docs": "typedoc src --out docs",
+    "clean": "rimraf ./dist ./docs"
   },
-  "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "25.0.3",
     "@rollup/plugin-node-resolve": "15.1.0",
