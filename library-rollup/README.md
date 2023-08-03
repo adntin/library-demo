@@ -44,7 +44,6 @@ yarn add -D eslint \
 {
   "scripts": {
     "dev": "rollup -c -w",
-
     "build": "rollup -c"
   }
 }
