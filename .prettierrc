@@ -1,0 +1,12 @@
+{
+  "overrides": [
+    {
+      "files": "**/src/**",
+      "options": {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "printWidth": 120
+      }
+    }
+  ]
+}
