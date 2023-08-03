@@ -37,12 +37,14 @@ yarn add -D eslint \
 
 2. `package.json`配置运行脚本
 
+- dev: Run Rollup in watch mode (-w) to detect changes to files during development
+- build: Run Rollup to build our production release distributable
+
 ```json
 {
   "scripts": {
-    // dev: Run Rollup in watch mode (-w) to detect changes to files during development
     "dev": "rollup -c -w",
-    // build: Run Rollup to build our production release distributable
+
     "build": "rollup -c"
   }
 }
@@ -50,15 +52,18 @@ yarn add -D eslint \
 
 4. `package.json`配置输出文件
 
+- main: CommonJS (CJS) output file
+- module: ES Module (ESM) output file
+- unpkg: Universal Module Definition (UMD) output file
+- files: Our files will be built to a “dist” folder
+- 注意: 只能是`unpkg`, 不能是`browser`, 否则浏览器会引用 UMD 文件导致如下报错:
+- export 'getDateTime' (imported as 'getDateTime') was not found in 'library-rollup' (module has no exports)
+
 ```json
-// main: CommonJS (CJS) output file
-// module: ES Module (ESM) output file
-// browser: Universal Module Definition (UMD) output file
-// files: Our files will be built to a “dist” folder
 {
   "main": "dist/library-demo.cjs.js",
   "module": "dist/library-demo.esm.js",
-  "browser": "dist/library-demo.umd.js",
+  "unpkg": "dist/library-demo.umd.js",
   "files": ["dist"]
 }
 ```
