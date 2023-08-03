@@ -30,6 +30,7 @@ export default [
       name: "libraryRollup",
       file: pkg.browser,
       format: "umd",
+      sourcemap: true,
     },
     plugins: [
       resolve(), // so Rollup can find `ms`
@@ -51,8 +52,8 @@ export default [
       typescript({ tsconfig: "./tsconfig.json" }), // so Rollup can convert TypeScript to JavaScript
     ],
     output: [
-      { file: pkg.main, format: "cjs" },
-      { file: pkg.module, format: "es" },
+      { file: pkg.main, format: "cjs", sourcemap: true },
+      { file: pkg.module, format: "es", sourcemap: true },
     ],
   },
 ];
