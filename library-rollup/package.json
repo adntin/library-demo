@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "library-rollup",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "TypeScript library npm package boilerplate",
   "author": "Devin <89256006@qq.com>",
   "homepage": "https://github.com/adntin/library-demo",
