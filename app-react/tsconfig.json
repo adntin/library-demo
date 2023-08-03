@@ -19,11 +19,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
-    "paths": {
-      "library-rollup": ["node_modules/library-rollup/src"],
-      "library-rollup/*": ["node_modules/library-rollup/src/*"]
-    }
+    // "baseUrl": ".",
+    // "paths": {
+    //   "library-rollup": ["node_modules/library-rollup/src"],
+    //   "library-rollup/*": ["node_modules/library-rollup/src/*"]
+    // }
   },
   "include": [
     "src"

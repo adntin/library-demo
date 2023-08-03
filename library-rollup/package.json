@@ -12,6 +12,7 @@
   "main": "dist/library-rollup.cjs.js",
   "module": "dist/library-rollup.esm.js",
   "browser": "dist/library-rollup.umd.js",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],

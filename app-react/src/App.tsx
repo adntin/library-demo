@@ -1,12 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { sayHi } from 'library-rollup';
+import { sayHi, getDateTime } from 'library-rollup';
 
-// console.log(getDateTime());
-// setDocumentTitle('123123');
+console.log(getDateTime());
 sayHi();
-// sum(1, 2);
 
 function App() {
   return (

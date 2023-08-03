@@ -47,7 +47,7 @@ export default [
   // `file` and `format` for each target)
   {
     input: "src/index.ts",
-    // external: ['ms'], // 剔除第三方库
+    // external: ["react", "react-dom"], // 剔除第三方库
     plugins: [
       typescript({ tsconfig: "./tsconfig.json" }), // so Rollup can convert TypeScript to JavaScript
     ],
