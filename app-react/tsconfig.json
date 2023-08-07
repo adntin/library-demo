@@ -19,11 +19,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    // "baseUrl": ".",
-    // "paths": {
-    //   "library-rollup": ["node_modules/library-rollup/src"],
-    //   "library-rollup/*": ["node_modules/library-rollup/src/*"]
-    // }
+    "baseUrl": ".",
+    "paths": {
+      "library-rollup": ["node_modules/library-rollup/src"],
+      "library-rollup/*": ["node_modules/library-rollup/src/*"],
+      "library-vite": ["node_modules/library-vite/src"],
+      "library-vite/*": ["node_modules/library-vite/src/*"]
+    }
   },
   "include": [
     "src"

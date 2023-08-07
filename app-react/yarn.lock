@@ -6195,7 +6195,10 @@ levn@^0.4.1:
     type-check "~0.4.0"
 
 "library-rollup@file:../library-rollup":
-  version "0.1.0"
+  version "1.0.0"
+
+"library-vite@file:../library-vite":
+  version "0.0.1"
 
 lilconfig@^2.0.3, lilconfig@^2.0.5, lilconfig@^2.1.0:
   version "2.1.0"
