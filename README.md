@@ -4,15 +4,15 @@
 
 [React Component Library with Vite and Deploy in NPM](https://articles.wesionary.team/react-component-library-with-vite-and-deploy-in-npm-579c2880d6ff)
 
-## 先决条件
+## 必备条件
 
 1. 你需要有 Git
 2. 你需要有 NodeJS 和 NPM
-3. 你需要有一个 NPM 帐号
+3. 你需要有一个 NPM 帐号，如果你没有，请创建一个。
 
-## 初始化和创建组件库
+## 初始化工程配置和创建组件库
 
-1. 搭建项目
+1. 搭建 React 项目
 
 ```shell
 # https://cn.vitejs.dev/guide/#scaffolding-your-first-vite-project
@@ -22,11 +22,31 @@ yarn create vite library-vite --template react-ts
 2. 配置 prettier 和 eslint
 
 ```shell
+# 1. 配置 eslint, 最终配置看`.eslintrc.json`
 yarn add -D eslint
-yarn add -D eslint-config-prettier
-yarn add -D eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-prettier
-yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
-yarn add -D prettier
+yarn eslint --init
+# You can also run this command directly using 'npm init @eslint/config'.
+# Need to install the following packages:
+#   @eslint/create-config@0.4.6
+# Ok to proceed? (y) y
+# ✔ How would you like to use ESLint? · problems
+# ✔ What type of modules does your project use? · esm
+# ✔ Which framework does your project use? · react
+# ✔ Does your project use TypeScript? · Yes
+# ✔ Where does your code run? · browser
+# ✔ What format do you want your config file to be in? · JavaScript
+# The config that you've selected requires the following dependencies:
+# @typescript-eslint/eslint-plugin@latest eslint-plugin-react@latest @typescript-eslint/parser@latest
+# ✔ Would you like to install them now? · Yes
+# ✔ Which package manager do you want to use? · yarn
+
+# 2. 配置 prettier, 最终配置看`.prettierrc`
+yarn add -D react-hooks eslint-plugin-simple-import-sort prettier
+
+# 3. 添加脚本, 最终配置看`package.json`
+# "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+# "lint:fix": "eslint --fix 'src/**/*.{jsx,ts,tsx}'",
+# "format": "prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc",
 ```
 
 3. 配置 husky 和 lint-staged
