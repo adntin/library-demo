@@ -49,7 +49,7 @@ yarn add -D react-hooks eslint-plugin-simple-import-sort prettier
 # "format": "prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc",
 ```
 
-3. 配置 husky 和 lint-staged
+3. 配置 husky 和 lint-staged, 需要在根目录运行，因为`.git`文件夹在根目录
 
 ```shell
 yarn add -D husky lint-staged
