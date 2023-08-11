@@ -68,12 +68,21 @@ yarn add -D husky lint-staged
 }
 ```
 
-4. 创建组件
+4. 创建业务组件
 
-5. 配置`vite.config.ts`文件
+5. 配置 `vite.config.ts` 文件
 
 ```shell
-yarn add -D vite-plugin-dts vite-plugin-linter vite-tsconfig-paths
+yarn add -D @vitejs/plugin-react vite-plugin-dts vite-plugin-linter vite-tsconfig-paths
 ```
 
-6. 配置`tsconfig.json`文件
+6. 配置 `tsconfig.json` 和 `tsconfig.node.json` 文件
+
+7. 配置 `package.json` 文件
+
+8. 发布 NPM
+
+```shell
+npm login
+npm publish
+```
